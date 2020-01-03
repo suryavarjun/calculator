@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>numberss</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-item>
+    <ion-label class="value">
+       {{ value }}
+    </ion-label>
+    </ion-item>
+
+  <ion-card>
+    <ion-item>
+    <ion-label >
+      <ion-button (click)="onButtonPress(1)"    class="btns">1</ion-button>
+      <ion-button (click)="onButtonPress(2)"    class="btns">2</ion-button>
+      <ion-button (click)="onButtonPress(3)"    class="btns">3</ion-button>
+      <ion-button (click)="onButtonPress('+')"  class="btn1">+</ion-button><br>
+      <ion-button (click)="onButtonPress(4)"    class="btns">4</ion-button>
+      <ion-button (click)="onButtonPress(5)"    class="btns">5</ion-button>
+      <ion-button (click)="onButtonPress(6)"    class="btns">6</ion-button>
+      <ion-button (click)="onButtonPress('-')"  class="btn1">-</ion-button><br>
+      <ion-button (click)="onButtonPress(7)"    class="btns">7</ion-button>
+      <ion-button (click)="onButtonPress(8)"    class="btns">8</ion-button>
+      <ion-button (click)="onButtonPress(9)"    class="btns">9</ion-button>
+      <ion-button (click)="onButtonPress('*')"  class="btn1">*</ion-button><br>
+      <ion-button (click)="onButtonPress(0)"    class="btn1">0</ion-button>
+      <ion-button (click)="onButtonPress('C')"  class="btn1">C</ion-button>
+      <ion-button (click)="onButtonPress('/')"  class="btn1">/</ion-button>
+      <ion-button (click)="onButtonPress('=')"  class="btn1">=</ion-button>
+   </ion-label>
+   </ion-item>
+</ion-card>
+
+</ion-content>

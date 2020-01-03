@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic page
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-card>
+  <ion-item>
+  <ion-label class="value">
+    {{ value }}
+  </ion-label>
+</ion-item>
+ <div *ngFor="let numGroup of numberGroups">
+   <ion-button  class="butns" *ngFor="let num of numGroup" (click)="onButtonPress(num)" color="light">{{num}}</ion-button>
+ </div>
+<br>
+</ion-card>
+ <ion-button (click)="cal()">Click</ion-button>
+
+ <ion-card>
+ <ion-list>
+   <ion-item>
+     <ion-img  src="/assets/icon/favicon.png" middle></ion-img>
+   </ion-item>
+ </ion-list>
+
+ <form [formGroup]="todo" (ngSubmit)="doSubmit()">
+    <ion-item class="item">
+      <ion-label position="floating">Enter Name</ion-label>
+      <ion-input formControlName="customerName" required [(ngModel)]="custname" value="{{ custname }}" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item class="item">
+      <ion-label position="floating">Enter Password</ion-label>
+      <ion-input formControlName="customerPassword" required [(ngModel)]="custpass" value="{{ custpass }}" type="Password"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" (click)="openMenu()">Login</ion-button>
+
+ </form>
+</ion-card>
+</ion-content>
